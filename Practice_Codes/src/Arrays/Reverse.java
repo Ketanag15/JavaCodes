@@ -16,14 +16,15 @@ public class Reverse {
         System.out.println("The entered array is: ");
         System.out.println(Arrays.toString(arr));
 
-        //Original Array is reversed here in this method.
+        //Original Array is reversed here in this method. [1,2,3] --> [3,2,1]
         ArrayReverse(arr);
-        //The reversed array is reversed again, so it will converted into original array again.
+
+        //The reversed array is reversed again, so it will be converted into original array again.
+        // [3,2,1] --> [1,2,3]
         ArrayReverse2(arr);
     }
 
-    //Without using extra Array.
-    //Swapping elements within the same array.
+    //Method 1 : Without using extra array, swapping the elements within the same array.
     private static void ArrayReverse(int[] arr) {
         int temp = 0;
         for (int i = 0; i < arr.length / 2; i++) {
@@ -35,8 +36,7 @@ public class Reverse {
         System.out.println(Arrays.toString(arr));
     }
 
-    //with using extra array
-
+    //Method 2 : With using a new array. Copying all elements of first array to the second array in reverse order.
     private static void ArrayReverse2(int[] arr){
         int[] newArr = new int[arr.length];
         for(int i=0; i<arr.length; i++){
