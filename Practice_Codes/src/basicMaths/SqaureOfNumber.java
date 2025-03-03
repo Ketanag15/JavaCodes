@@ -2,7 +2,7 @@ package basicMaths;
 
 import java.util.Scanner;
 
-public class Sqaure {
+public class SqaureOfNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of which you want to print the Sqaure and cube : ");
