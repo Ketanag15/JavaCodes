@@ -7,8 +7,11 @@ public class Fibonacci {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number till which you want to print the series.");
         int n = sc.nextInt();
-
         fib_series(n);
+
+        System.out.println("Enter the nth number of the series : ");
+        int m = sc.nextInt();
+        System.out.println("The "+m+" number of the series is : "+nthFibNumber(m));
     }
 
     //Method 1 : to print the series upto N numbers.
@@ -24,5 +27,15 @@ public class Fibonacci {
         }
     }
 
-
+    //Method 2 : to print the Nth term of the series.
+    private static int nthFibNumber(int n){
+        int first = 0, second = 1;
+        int third = 0;
+        for(int i=3; i<=n; i++){
+            third = first+second;
+            first = second;
+            second = third;
+        }
+        return third;
+    }
 }
