@@ -31,6 +31,12 @@ public class Fibonacci {
     private static int nthFibNumber(int n){
         int first = 0, second = 1;
         int third = 0;
+        if(n==1){
+            return first;
+        }
+        if(n==2){
+            return second;
+        }
         for(int i=3; i<=n; i++){
             third = first+second;
             first = second;
