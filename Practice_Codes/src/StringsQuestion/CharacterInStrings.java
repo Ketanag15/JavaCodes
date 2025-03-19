@@ -11,10 +11,11 @@ public class CharacterInStrings {
 
         System.out.println("The number of characters in the string :"+str+" is :"+countofChar(str));
         System.out.println("The number of characters in the string :"+str+" is :"+countChar(str));
+        System.out.println("The number of characters in the string :"+str+" is :"+string_Length(str));
     }
 
     //method 1 : inbuilt method
-    private static int countofChar(String str){
+    private static int countofChar(String str) {
         return str.length();
     }
 
@@ -25,5 +26,14 @@ public class CharacterInStrings {
             n++;
         }
         return n;
+    }
+
+    //Method 3 : Without .length()
+    private static int string_Length(String str){
+        int count = 0;
+        for (int i: str.toCharArray()) {
+            count++;
+        }
+        return count;
     }
 }
