@@ -2,8 +2,8 @@ package Patterns;
 
 public class Patterns {
     public static void main(String[] args) {
-        int n = 5;
-        pyramid(n);
+        int n = 3;
+        characterPalindromicPyramid(n);
     }
 
     /*
@@ -179,5 +179,66 @@ public class Patterns {
             System.out.println();
         }
     }
-
+    /*
+        A
+       ABC
+      ABCDE
+     */
+    public static void character_Pyramid(int n){
+        for(int i=1; i<=n; i++){
+            char c = 'A';
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int k=1; k<=(2*i)-1; k++){
+                System.out.print(c);
+                c++;
+            }
+            System.out.println();
+        }
+    }
+    /*
+        1
+       121
+      12321
+     */
+    public static void Palindromic_Triangle(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int k = 1; k<=i; k++){
+                System.out.print(k);
+            }
+            for(int k = i-1; k>=1; k--){
+                System.out.print(k);
+            }
+            System.out.println();
+        }
+    }
+    /*
+        A
+       ABA
+      ABCBA
+     ABCDCBA
+    ABCDEDCBA
+     */
+    public static void characterPalindromicPyramid(int n){
+        for(int i=1; i<=n; i++){
+            char c = 'A';
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int k=1; k<=i; k++){
+                System.out.print(c);
+                c++;
+            }
+            c-=2;
+            for(int k=i-1; k>=1; k--){
+                System.out.print(c);
+                c--;
+            }
+            System.out.println();
+        }
+    }
 }
