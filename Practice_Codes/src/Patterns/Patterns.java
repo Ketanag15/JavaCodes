@@ -3,7 +3,7 @@ package Patterns;
 public class Patterns {
     public static void main(String[] args) {
         int n = 5;
-        charRepeat(n);
+        pyramid(n);
     }
 
     /*
@@ -147,4 +147,37 @@ public class Patterns {
             System.out.println();
         }
     }
+    /*
+    1
+    23
+    456
+    78910
+     */
+    public static void FloydsTriangle(int n){
+        int k=1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(k + " ");
+                k++;
+            }
+            System.out.println();
+        }
+    }
+    /*
+      *
+     ***
+    *****
+     */
+    public static void pyramid(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int k=1; k<=(2*i)-1; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 }
