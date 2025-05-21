@@ -2,8 +2,8 @@ package Patterns;
 
 public class Patterns {
     public static void main(String[] args) {
-        int n = 3;
-        characterPalindromicPyramid(n);
+        int n = 5;
+        ReverseNumberReverseTriangle(n);
     }
 
     /*
@@ -237,6 +237,54 @@ public class Patterns {
             for(int k=i-1; k>=1; k--){
                 System.out.print(c);
                 c--;
+            }
+            System.out.println();
+        }
+    }
+    /*
+     *********
+      *******
+       *****
+        ***
+         *
+     */
+    public static void invertedPyramid(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            for(int k=(2*i)-1; k>=1; k--){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    /*
+     12345
+     1234
+     123
+     12
+     1
+     */
+    public static void ReverseNumberTriangle(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    /*
+    54321
+    5432
+    543
+    54
+    5
+     */
+    public static void ReverseNumberReverseTriangle(int n){
+        for(int i=n; i>=1; i--){
+            for(int j=n; j>n-i; j--){
+                System.out.print(j);
             }
             System.out.println();
         }
