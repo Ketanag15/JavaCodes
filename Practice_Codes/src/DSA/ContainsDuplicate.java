@@ -2,6 +2,9 @@ package DSA;
 
 import java.util.*;
 
+//https://leetcode.com/problems/contains-duplicate/description/
+//217. Contains Duplicate
+
 public class ContainsDuplicate {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,1,2,7};
