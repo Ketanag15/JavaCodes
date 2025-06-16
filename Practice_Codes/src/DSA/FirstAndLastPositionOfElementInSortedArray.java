@@ -1,6 +1,9 @@
 package DSA;
 import java.util.*;
 
+//https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/
+//34 - First And Last Position Of Element In Sorted Array
+
 public class FirstAndLastPositionOfElementInSortedArray {
     public static void main(String[] args) {
         int[] arr = {5,7,7,8,8,10};
